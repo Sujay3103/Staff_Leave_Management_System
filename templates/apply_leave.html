@@ -1,0 +1,41 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="page-narrow">
+      <div class="card">
+        <h1>Apply Leave:</h1>
+        <br />
+        <form action="" method="post">
+          {% csrf_token %}
+          <div class="field">
+            <select name="leave_type" id="">
+              <option value="">Select</option>
+              <option value="Casual">Casual</option>
+              <option value="Sick Leave">Sick Leave</option></select
+            ><br /><br />
+          </div>
+          <div class="field">
+            <label for="">Start Date</label>
+            <input type="date" name="start" /><br /><br />
+          </div>
+          <div class="field">
+            <label for="">End Date</label>
+            <input type="date" name="end" /><br /><br />
+          </div>
+          <div class="field">
+            <label for="">Reason</label>
+            <textarea name="reason" id=""></textarea><br /><br />
+          </div>
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

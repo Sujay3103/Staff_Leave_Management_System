@@ -1,0 +1,31 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="navbar">
+      <span class="brand">SLMS Project</span>
+      <a href="/log_out/">logout</a>
+    </div>
+    <div class="page">
+      <h1 class="welcome">Welcome {{ request.user.username }}</h1>
+      <div class="row">
+        <div class="tile">
+          <h1>Apply Leave</h1>
+          <p>Submit a new leave request</p>
+          <a href="/leave/apply_leave/">Apply</a>
+        </div>
+        <div class="tile">
+          <h1>My Leave Status</h1>
+          <p>View your leave request</p>
+          <a href="/leave/my_leaves/">View</a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

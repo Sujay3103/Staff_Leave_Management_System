@@ -1,0 +1,24 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home page</title>
+  </head>
+  <body>
+    <div class="hero">
+      <header><p>Apply for leave, track requests, and manage staff — all in one place.</p></header>
+      <h1>Staff Leave Management System</h1>
+      <div class="actions" style="height: 500px;">
+        <a href="{% url 'login' %}">Login</a><br /><br />
+        <a href="{% url 'register' %}">Register</a>
+      </div>
+      <footer>
+      <p>@ Copyright 2026 H.R.Sujay|All Rights Not Reserved</p>
+    </footer>
+    </div>
+    
+  </body>
+</html>

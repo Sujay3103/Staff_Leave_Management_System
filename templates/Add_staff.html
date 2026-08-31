@@ -1,0 +1,28 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="page-narrow">
+      <div class="card">
+        <form action="" method="post">
+          {% csrf_token %}
+          <div class="field">
+            <label for="">Username:</label><input type="text" name="username" />
+          </div>
+          <div class="field">
+            <label for="">Password:</label
+            ><input type="password" name="password" /> <br /><br />
+          </div>
+          <button type="submit">Submit</button>
+        </form>
+        <a href="{% url 'manage_staff' %}">Back to manage staff</a>
+      </div>
+    </div>
+  </body>
+</html>

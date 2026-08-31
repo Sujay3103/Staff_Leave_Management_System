@@ -1,0 +1,37 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="page-narrow">
+      <h1>SLMS Registration</h1>
+      <div class="card">
+        <form action="" method="post">
+          {% csrf_token %}
+          <div class="field">
+            <label for="">Username:</label><input type="text" name="username" />
+          </div>
+          <div class="field">
+            <label for="">Password</label
+            ><input type="password" name="password" id="password" />
+          </div>
+          <div class="field">
+            <label for="">Role</label>
+            <select name="role">
+              <option value="">--- Select role --</option>
+              <option value="admin">Admin</option>
+              <option value="staff">Staff</option>
+            </select>
+          </div>
+          <p></p>
+          <button type="submit">Register</button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,29 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="navbar">
+      <a href="/leave/view_leave/">View leave Request</a>
+      <a href="/log_out/">Logout</a>
+    </div>
+    <h2 class="welcome">Admin Dashboard, Welcome {{ user.username }}</h2>
+    <div class="row">
+      <div class="tile">
+        <h3>Total Leave Request</h3>
+        <p>Manage all staff leave application</p>
+        <a href="/leave/view_leave/">open</a>
+      </div>
+      <div class="tile">
+        <h3>Staff Management</h3>
+        <p>View registered staff users</p>
+        <a href="/manage_staff/">Manage Staff</a>
+      </div>
+    </div>
+  </body>
+</html>

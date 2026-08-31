@@ -1,0 +1,34 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>My Leaves</h1>
+    <div class="table-wrap">
+    <table border="2px">
+        <tr>
+            <th>Leave type</th>
+            <th>Start date</th>
+            <th>End date</th>
+            <th>Reason</th>
+            <th>Status</th>
+        </tr>
+        {% for i in leaves %}
+        <tr>
+            <td>{{i.leave_type}}</td>
+            <td>{{i.start_date}}</td>
+            <td>{{i.end_date}}</td>
+            <td>{{i.reason}}</td>
+            <td>{{i.status}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    </div>
+    <a href="{% url 'staff_dash' %}">Return Home</a>
+</body>
+</html>
